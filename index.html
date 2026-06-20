@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open me</title>
+  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- important for mobile -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="tulip.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("tulip-background.png") no-repeat center center fixed;
+      background-size: cover; /* matte pink tulip background */
+    }
+
+    /* Center the carousel */
+    .carousel-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* centers vertically */
+      padding: 1rem;
+    }
+
+    #tulipCarousel {
+      border-radius: 20px;
+      background: none; /* no border, no background fill */
+      width: 100%;
+      max-width: 800px; /* limit size on large screens */
+    }
+
+    .carousel-item img {
+      border-radius: 12px;
+      width: 100%; /* full width for responsiveness */
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    /* Custom pink button */
+    .btn-pink {
+      background-color: #d36b7b; /* deep pink */
+      border: none;
+      color: #fff;
+    }
+
+    .btn-pink:hover {
+      background-color: #b85a6a; /* darker pink on hover */
+      color: #fff;
+    }
+
+    /* Custom arrow design */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: none; /* remove default chevron */
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #d36b7b; /* deep pink circle */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .carousel-control-prev-icon::after {
+      content: "⟵"; /* left arrow */
+    }
+
+    .carousel-control-next-icon::after {
+      content: "⟶"; /* right arrow */
+    }
+
+    .modal-content {
+      border-radius: 10px;
+    }
+	.verse {
+		font-style: italic;
+		font-family: "Georgia", "Times New Roman", serif; /* classic serif look */
+		font-size: 1.1rem; /* slightly larger for readability */
+		line-height: 1.6;
+		text-align: center; /* centered like scripture quotes */
+		color: #6a1f2b; /* deep wine-pink tone to match your theme */
+		margin: 1rem 0;
+	}
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .carousel-item img {
+        max-height: 300px; /* smaller height on phones */
+      }
+      .btn-pink {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel-wrapper">
+  <div id="tulipCarousel" class="carousel slide">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active text-center">
+        <img src="photo1.jpg" alt="Tulip 1">
+        <div class="mt-3">
+          <button class="btn btn-pink" data-bs-toggle="modal" data-bs-target="#letter1">Haluu! Click me!</button>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item text-center">
+        <img src="photo2.jpg" alt="Tulip 2">
+        <div class="mt-3">
+          <button class="btn btn-pink" data-bs-toggle="modal" data-bs-target="#letter2">Ayaaabyuu! Click me!</button>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item text-center">
+        <img src="photo3.jpg" alt="Tulip 3">
+        <div class="mt-3">
+          <button class="btn btn-pink" data-bs-toggle="modal" data-bs-target="#letter3">Imisschuu! Click me!</button>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item text-center">
+        <img src="photo4.jpg" alt="Tulip 4">
+        <div class="mt-3">
+          <button class="btn btn-pink" data-bs-toggle="modal" data-bs-target="#letter4">Kiss mo ko! Click me!</button>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-item text-center">
+        <img src="photo5.jpg" alt="Tulip 5">
+        <div class="mt-3">
+          <button class="btn btn-pink" data-bs-toggle="modal" data-bs-target="#letter5">Wifeeyy heree! Click me!</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#tulipCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#tulipCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="letter1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>1st talk</h5>
+      <p>Haluu Beebiii! Happyy happpyyy happyyy bitrthdaay! The pictures for this for letter includes the first pic you sent to me and the first time we interacted on facebook 😊 It was the beginning
+	  of our story together, it was the moment where our paths met 😊 The day where I can say I made the right choice, my bet decision to ever make 😊 How time flies, we are already celebrating your birthday together twice 😊
+	  I look forward to more birthdays, christmas, new year, and all the special occassions 😊 We will be together for all of those mwaaa 😊 This is also the time you told me I'm the first person you will boast to when you finally get your
+	  teaching license mwaaaa 😊</p>
+	  <p class="verse"> Joshua 1:9 (ESV): "Be strong and courageous. Do not be frightened, and do not be dismayed, for the Lord your God is with you wherever you go." <p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="letter2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>Pressure of work</h5>
+      <p>Haluuu second letter mwaaa 😊 For this letter the two pics was from your work 😊 I remember the time where you were tired, exhausted, and having a lot of migraine from that work which led you to a corner where you needed to take a breather
+	  from the world 😊 But I saw how you struggled and saw your strength, you never let anyone let you down, you know deep within you that you can do it 😊 You push through your own limits and made sure before you left that place that your name still stands
+		and let them know that you as well can do it 😊 You had a lot of breakdowns and self doubt where you thought that maybe you were meant to that work and only forcing the path to teaching but you held on to your dream 😊 You leaped the high road,
+		you took a risk and a decision to take another chance at this teaching path which made me admire you more mwaaaa 😊</p>
+		<p class="verse"> Proverbs 24:16 (ESV): "For the righteous falls seven times and rises again, but the wicked stumble in times of calamity." <p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="letter3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>1st Birthday together</h5>
+      <p>My 3rd letter mwaaaa 😊 This letter I posted the first time we celebrated your birthday together 😊 You were the princess of this day, anything you ask for we did and everything you wanted we got it 😊 I wanted to show you the your birthday is
+	  is special, this is your day, the day where you were introduced the world 😊 I wanted to make this day memorable and make you say the words "I had fun during my birthday" 😊 Today is everything about you, you are the star of this day, you are the
+	  main character 😊 What you wish my beloved queen, is my command 😊 If everyone else disagree I'll debate everyone of them, if they don't see you I'll make sure you feel that I see you, if you think your alone my arms will always wrap around you,
+		if you feel cold let the warmth of my body be your fireplace, if you feel you are sinking I'll make sure my hand is always within your reach, if you feel no one is proud of you I will provide the loudest clap for you 😊 You are the most precious 
+		thing in this world, you are special, and this is your day so enjoy it mwaaa</p>
+		<p class="verse"> Jeremiah 29:11 (NIV): "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future." <p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="letter4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>Exam and review days</h5>
+      <p>4th letter hihi 😊 The two pictures are from your review days and the day of your exam 😊 These are the days where you faced your challenges head on, you had a short period of review time, and you felt you weren't ready 😊 You had your lows and high,
+	  but one thing you never lost was your faith and hope 😊 No matter how hard life was hitting you, you held on to what you believe in and it's got you in a point where you did not stop even when you were doubting yourself 😊 You never gave up, you tried
+	  then tried again because it is what you want 😊 You had times where you said you don't you would make it and times where you said you might stop pursuing this due to the disappointment after but in your heart you still fought for the love of your dream 😊
+	  You are one of the strongest people I know, you never had a weak heart and you're mentality is not frail 😊 Most people forget and stay accustomed to what if but you never stayed on that path you kept your head high and made your march through that path
+	  of your dreams 😊 You are not weak my wifeeeyy, you are strong, and you are the best mwaaa 😊</p>
+	  <p class="verse"> Philippians 4:13 (NIV): "I can do all this through him who gives me strength" <p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="letter5" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>LPT Beebiii</h5>
+      <p>This is my 5th letter, not the last cause I will be making a lot of letters in the future to greet you 😊 Yeheeeeyyy!! Congraaaatulaatioons!! This is the day you finally get your pin and now officially a licensed teacher 😊 What a beautiful journey
+	  it is achieving one of your goals 😊 I'm keeping this site open, it is like our diary of journeys to our goals 😊 All the doubt, the frustration, the stress, the rejection, the fails, and the pressure 😊 You turned those things into motivation to show them
+	  "I'll make it" "All of the poeple who didn't believe me look at me now" you showed them that you can and proved them wrong 😊 You're the best daughter your parents could ask for, you're the best sibling anyone could have, you are the best teacher 
+	  that any student could wish for, you are the best partner anyone would pay the wishing well for, and you are the best person anyone would know 😊 If they can't see it beebii I do and I'm telling you all your efforts are seen and I'm proud of you 😊
+	  This is your first birthday as a licensed teacher, we are going to do anything you want 😊 You should pick what you want and have fun, list down the things you want to do and have fun  😊 Happpyyy Biiirthdaaay!! You're the greatest decision I've ever made,
+	  you're my rock when I'm tired, you're my happiness when I'm sad and you are my everything 😊 Enjooy youur daay beebii! ilooooveyouuuuusoooomuuchiiiieee and imiissschuuuuu alwaaays mwaaa  😊</p>
+	  <p class="verse"> Psalms 20:4 (NIV): "May he give you the desire of your heart and make all your plans succeed." <p>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Disable auto scrolling
+  var myCarousel = document.querySelector('#tulipCarousel');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: false,
+    ride: false
+  });
+</script>
+</body>
+</html>
